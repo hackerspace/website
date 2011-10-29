@@ -19,8 +19,8 @@ body {
 
 #menu ul li:before {
   content: "~";
-  color: red;
-  font-weight: bold;
+  color: #515492;
+/*  font-weight: bold;*/
   padding-right: 0.2em;
 }
 
@@ -53,8 +53,8 @@ body {
 
 #menu2 ul li:before {
   content: "~";
-  color: green;
-  font-weight: bold;
+  color: #009042;
+/*  font-weight: bold;*/
   padding-right: 0.2em;
 }
 
@@ -66,12 +66,12 @@ body {
 }
 
 #logo {
-  letter-spacing: -2px;
+/*  letter-spacing: -2px; */
 }
 
 #logotyp {
   font-size: 74;
-  font-weight: bold;
+/*  font-weight: bold;*/
 }
 
 #logotyp48 {
@@ -85,16 +85,26 @@ body {
 }
 
 #header {
-  background: #240411;
   position: relative;
-}
 
-#header {
   font-size: 70%;
-  font-weight: bold;
+/*  font-weight: bold;*/
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.000em;
+  font-style: normal;
+  font-weight: 400;
   height: 180px;
 }
 
+.headspanner {
+  width: 100%;
+  background: #240411;
+}
+
 #footer {
+}
+
+.footspanner {
+  width: 100%;
   background: #493942;
 }

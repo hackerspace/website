@@ -1,5 +1,5 @@
 body {
-  background: #412b35;
+  background: #493942;
   color: #57444e;
   font-family: helvetica;
   padding: 0;
@@ -35,10 +35,10 @@ body {
   color: #57444e;
 }
 #menu a:active {
-  color: red;
+  color: #515492;
 }
 #menu a:hover {
-  color: red;
+  color: #6569b6;
 }
 
 #menu2 {
@@ -57,6 +57,24 @@ body {
 /*  font-weight: bold;*/
   padding-right: 0.2em;
 }
+
+#menu2 a {
+  text-decoration: none;
+}
+
+#menu2 a:link {
+  color: #57444e;
+}
+#menu2 a:visited {
+  color: #57444e;
+}
+#menu2 a:active {
+  color: #009042;
+}
+#menu2 a:hover {
+  color: #00b352;
+}
+
 
 .atbot {
   bottom: 0px;
@@ -81,7 +99,7 @@ body {
 }
 
 #hs {
-  font-size:36;
+  font-size:42;
 }
 
 #header {
@@ -107,4 +125,45 @@ body {
 .footspanner {
   width: 100%;
   background: #493942;
+  color: #87727c;
 }
+
+.contspanner {
+  width: 100%;
+  background: #412b35;
+  color: #87727c;
+}
+#content {
+  padding-top: 10px;
+}
+
+.redbox {
+  width: 280px;
+  height: 280px;
+  background: #9d0817;
+}
+
+.blubox {
+  width: 280px;
+  height: 280px;
+  background: #515492;
+}
+
+.gribox {
+  width: 280px;
+  height: 280px;
+  background: #009042;
+}
+
+.redtxt {
+  color: #9d0817;
+}
+
+.blutxt {
+  color: #515492;
+}
+
+.gritxt {
+  color: #009042;
+}
+

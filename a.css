@@ -1,0 +1,100 @@
+body {
+  background: #412b35;
+  color: #57444e;
+  font-family: helvetica;
+  padding: 0;
+  margin: 0;
+}
+
+#menu {
+  font-size: 24;
+  line-height: 30px;
+  margin: 0;
+}
+
+#menu ul {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+#menu ul li:before {
+  content: "~";
+  color: red;
+  font-weight: bold;
+  padding-right: 0.2em;
+}
+
+#menu a {
+  text-decoration: none;
+}
+
+#menu a:link {
+  color: #57444e;
+}
+#menu a:visited {
+  color: #57444e;
+}
+#menu a:active {
+  color: red;
+}
+#menu a:hover {
+  color: red;
+}
+
+#menu2 {
+  font-size: 24;
+  line-height: 30px;
+}
+
+#menu2 ul {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+#menu2 ul li:before {
+  content: "~";
+  color: green;
+  font-weight: bold;
+  padding-right: 0.2em;
+}
+
+.atbot {
+  bottom: 0px;
+  position: absolute;
+  line-height: 10px;
+  padding-bottom: 20px;
+}
+
+#logo {
+  letter-spacing: -2px;
+}
+
+#logotyp {
+  font-size: 74;
+  font-weight: bold;
+}
+
+#logotyp48 {
+  font-size: 138;
+  font-weight: bold;
+  color: #9d0817;
+}
+
+#hs {
+  font-size:36;
+}
+
+#header {
+  background: #240411;
+  position: relative;
+}
+
+#header {
+  font-size: 70%;
+  font-weight: bold;
+  height: 180px;
+}
+
+#footer {
+  background: #493942;
+}

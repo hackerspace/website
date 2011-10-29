@@ -69,7 +69,7 @@ body {
   color: #57444e;
 }
 #menu2 a:active {
-  color: #009042;
+  color: #57444e;
 }
 #menu2 a:hover {
   color: #00b352;
@@ -85,6 +85,23 @@ body {
 
 #logo {
 /*  letter-spacing: -2px; */
+}
+
+#logo a {
+  text-decoration: none;
+}
+
+#logo a:link {
+  color: #57444e;
+}
+#logo a:visited {
+  color: #57444e;
+}
+#logo a:active {
+  color: #009042;
+}
+#logo a:hover {
+  color: #9d0817;
 }
 
 #logotyp {

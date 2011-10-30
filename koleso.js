@@ -7,8 +7,8 @@ function keke() {
   }
 
   Raphael.fn.wheel = function(x, y, r, sz, count, rot) {
-    var path = "M".concat(x," ", y);
     var a = 2 * r * Math.sin(3.14/count);
+    var path = "M".concat(x-a/2," ", y-r);
 
     for (var i = 0; i < count; i++) {
       var xy2 = rotit(a/2,   0, 2*3.14*i/count);
@@ -24,41 +24,23 @@ function keke() {
     return this.path(path);
   }
 
-  var k = paper.wheel(60, 60, 40, 15, 10, 0);
-  k.attr("stroke", "#fff");
-  k.attr("stroke-width", 2);
-  k.attr("stroke-opacity", 0.9);
-  k.attr("fill", "#444");
-  var anim = Raphael.animation({transform: "r36"}, 1000);
-  k.animate(anim.repeat(Infinity));
-
-  var k = paper.wheel(60, 155, 40, 15, 10, 18);
-  k.attr("stroke", "#fff");
-  k.attr("stroke-width", 2);
-  k.attr("stroke-opacity", 0.9);
-  k.attr("fill", "#444");
-  k.transform("r18");
-  var anim = Raphael.animation({transform: "r-18"}, 1000);
-  k.animate(anim.repeat(Infinity));
-
-  var k = paper.wheel(155, 60, 40, 15, 10, 0);
-  k.attr("stroke", "#fff");
-  k.attr("stroke-width", 2);
-  k.attr("stroke-opacity", 0.9);
-  k.attr("fill", "#444");
-  k.transform("r18");
-  var anim = Raphael.animation({transform: "r-18"}, 1000);
-  k.animate(anim.repeat(Infinity));
-
-  var k = paper.wheel(155, 155, 40, 15, 10, 18);
-  k.attr("stroke", "#fff");
-  k.attr("stroke-width", 2);
-  k.attr("stroke-opacity", 0.9);
-  k.attr("fill", "#444");
-  k.transform("r0");
-  var anim = Raphael.animation({transform: "r36"}, 1000);
-  k.animate(anim.repeat(Infinity));
-
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      var k = paper.wheel(33+i*43, 33+j*43, 18, 5, 20, 0);
+      paper.circle(33+i*43, 33+j*43, 5).attr({"fill": "white"});
+      k.attr("stroke", "#fff");
+      k.attr("stroke-width", 1);
+      k.attr("stroke-opacity", 0.9);
+      k.attr("fill", "#444");
+      k.mouseover(
+          function () {this.attr('fill', '#555');}
+      ).mouseout(
+          function () {this.attr('fill', '#444');});
+      k.transform("r".concat(-9*((i+j) % 2)));
+      var anim = Raphael.animation({transform: "r".concat((i+j) % 2 == 0 ? -18: 9)}, 2000);
+      k.animate(anim.repeat(Infinity));
+    }
+  }
 }
 
 $( function() {

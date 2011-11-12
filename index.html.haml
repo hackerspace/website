@@ -1,0 +1,91 @@
+%html
+  %head
+    %meta{:content => "initial-scale=1.0, user-scalable=no", :name => "viewport"}/
+    %link{:href => "grid.css", :rel => "stylesheet"}
+    %script{:src => "http://maps.googleapis.com/maps/api/js?sensor=false", :type => "text/javascript"}
+    %script{:src => "js/Three.js"}
+    %script{:src => "js/RequestAnimationFrame.js"}
+    %script{:src => "js/jquery-1.7.min.js"}
+
+  %body{:onload => "initialize()"}
+    .container_12
+      .grid_12
+        %center
+          %div{:style => "font-size:4em;"} base48
+          %div hackerspace
+          %div
+            %a{:href => "irc://irc.freenode.net/base48"} #base48 @ irc.freenode.net
+    .container_12
+      .grid_7{:style => "position: relative; top: 2em;"}
+        %h2 ABOUT
+        %h3 What is hackerspace?
+        %ul
+          %li equipment
+          %li laboratory
+          %li club
+          %li community
+        %h3
+          Hackerspace in Brno
+          %h3
+            %h4 CODENAME
+            New codename for our hackerspace is
+            %strong BASE 48
+            but technically we are
+            %strong Underground, o.s.
+            %p We are also refered as:
+            %ul
+              %li HSBR - Hacker Space BRno
+              %li Underground hackerspace
+              %li Underground Lab
+            %h4
+              Why number 110000
+              %sub 2
+              \- "48"
+            Because our actual space is in the street Čápkova with orientation number 48
+            and because with name BASE 64 we would have a little problem with google preferation ...
+            %h4 Aims of our hackerspace
+            %ul
+              %li electronics
+              %li robotics & AI
+              %li security & pentesting
+              %li low level & assembly hacking
+              %li open source / core development
+              %li lectures place
+      .grid_5{:style => "position: relative; top: 2em;"}
+        %h2 Place
+        #map_canvas{:style => "width:100%; height:30%"}
+        %small
+          %a{:href => "http://maps.google.com/maps?hl=cs&q=google+maps+capkova+48,+Brno&ie=UTF8&hq=&hnear=%C4%8C%C3%A1pkova+543%2F48,+602+00+Brno-Veve%C5%99%C3%AD,+%C4%8Cesk%C3%A1+republika&ll=49.204139,16.594379&spn=0.01015,0.015407&t=h&z=14&vpsrc=0&source=embed", :style => "color:#0000FF;text-align:left"} Zvětšit mapu
+        %h4 PRESENTATION PDF in czech is
+        = succeed "." do
+          %a{:href => "http://undergroundlab.cz/HACKERSPACE/doc/underground.pdf"} available
+    .clear
+    .container_12
+      .grid_12{:style => "position: relative; top: 2em; text-align: center;"}
+        We also have a
+        = succeed "." do
+          %a{:href => "http://undergroundlab.cz/hackerspace/wiki/"} wiki
+        #logo_canvas
+        %p
+          %small Powered by plaintext
+
+:javascript
+  function initialize() {
+    var latlng = new google.maps.LatLng(49.20418,16.594387);
+    var myOptions = {
+      zoom: 17,
+      center: latlng,
+      disableDefaultUI: true,
+      mapTypeId: google.maps.MapTypeId.SATELLITE
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+
+    var marker = new google.maps.Marker({
+        position: latlng, 
+        map: map, 
+        title:"base48"
+    }); 
+  }
+  
+  

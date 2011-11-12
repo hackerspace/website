@@ -1,75 +1,108 @@
 <html>
-<head>
-    <link rel="stylesheet" href="grid.css">
-</head>
-<body>
- <div class="container_12">
-  <div class="grid_12">
-   <center>
-   <div style="font-size:4em;">base48</div>
-   <div>hackerspace</div>
-   <div><a href="irc://irc.freenode.net/base48">#base48 @ irc.freenode.net</a></div>
-   </center>
-  </div>
- </div>
- 
- <div class="container_12">
-  <div class="grid_7" style="position: relative; top: 2em;">
-   <h2>ABOUT</h2>
- 
-    <h3>What is hackerspace?</h3>
-    <ul>
-      <li>equipment</li>
-      <li>laboratory</li>
-      <li>club</li>
-      <li>community</li>
-    </ul>
- 
-    <h3>Hackerspace in Brno<h3>
-    <h4>CODENAME</h4>
-    New codename for our hackerspace is <strong>BASE 48</strong> but technically we are <strong>Underground, o.s.</strong>
-    <p>We are also refered as:</p>
-    <ul>
-      <li>HSBR - Hacker Space BRno</li>
-      <li>Underground hackerspace</li>
-      <li>Underground Lab </li>
-    </ul>
- 
-    <h4>Why number 110000<sub>2</sub> - "48"</h4>
-    Because our actual space is in the street Čápkova with orientation number 48
-    and because with name BASE 64 we would have a little problem with google preferation ...
-    
-        
-    
-    <h4> Aims of our hackerspace</h4>
-    <ul>
-      <li>electronics</li>
-      <li>robotics & AI</li>
-      <li>security & pentesting</li>
-      <li>low level & assembly hacking</li>
-      <li>open source / core development</li>
-      <li>lectures place</li>
-    </ul>
-   </div>
-
-   <div class="grid_5" style="position: relative; top: 2em;">
-    <h2>Place</h2>
-    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=cs&amp;q=google+maps+capkova+48,+Brno&amp;ie=UTF8&amp;hq=&amp;hnear=%C4%8C%C3%A1pkova+543%2F48,+602+00+Brno-Veve%C5%99%C3%AD,+%C4%8Cesk%C3%A1+republika&amp;ll=49.204139,16.594379&amp;spn=0.01015,0.015407&amp;t=h&amp;z=14&amp;vpsrc=0&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?hl=cs&amp;q=google+maps+capkova+48,+Brno&amp;ie=UTF8&amp;hq=&amp;hnear=%C4%8C%C3%A1pkova+543%2F48,+602+00+Brno-Veve%C5%99%C3%AD,+%C4%8Cesk%C3%A1+republika&amp;ll=49.204139,16.594379&amp;spn=0.01015,0.015407&amp;t=h&amp;z=14&amp;vpsrc=0&amp;source=embed" style="color:#0000FF;text-align:left">Zvětšit mapu</a></small>
-    <h4>PRESENTATION</h4>
-    PDF in czech is <a href="http://undergroundlab.cz/HACKERSPACE/doc/underground.pdf">available</a>.
-
-   </div>
-
-  </div> 
- </div>
-
- <div class="clear"></div>
-
- <div class="container_12">
-  <div class="grid_12" style="position: relative; top: 2em; text-align: center;">
-    We also have a <a href="http://undergroundlab.cz/hackerspace/wiki/">wiki</a>.
-    <p><small>Powered by plaintext</small></p>
-  </div>
- </div>
-</body>
+  <head>
+    <meta content='initial-scale=1.0, user-scalable=no' name='viewport' />
+    <link href='grid.css' rel='stylesheet' />
+    <script src='http://maps.googleapis.com/maps/api/js?sensor=false' type='text/javascript'></script>
+    <script src='js/Three.js'></script>
+    <script src='js/RequestAnimationFrame.js'></script>
+    <script src='js/jquery-1.7.min.js'></script>
+  </head>
+  <body onload='initialize()'>
+    <div class='container_12'>
+      <div class='grid_12'>
+        <center>
+          <div style='font-size:4em;'>base48</div>
+          <div>hackerspace</div>
+          <div>
+            <a href='irc://irc.freenode.net/base48'>#base48 @ irc.freenode.net</a>
+          </div>
+        </center>
+      </div>
+    </div>
+    <div class='container_12'>
+      <div class='grid_7' style='position: relative; top: 2em;'>
+        <h2>ABOUT</h2>
+        <h3>What is hackerspace?</h3>
+        <ul>
+          <li>equipment</li>
+          <li>laboratory</li>
+          <li>club</li>
+          <li>community</li>
+        </ul>
+        <h3>
+          Hackerspace in Brno
+          <h3>
+            <h4>CODENAME</h4>
+            New codename for our hackerspace is
+            <strong>BASE 48</strong>
+            but technically we are
+            <strong>Underground, o.s.</strong>
+            <p>We are also refered as:</p>
+            <ul>
+              <li>HSBR - Hacker Space BRno</li>
+              <li>Underground hackerspace</li>
+              <li>Underground Lab</li>
+            </ul>
+            <h4>
+              Why number 110000
+              <sub>2</sub>
+              - "48"
+            </h4>
+            Because our actual space is in the street Čápkova with orientation number 48
+            and because with name BASE 64 we would have a little problem with google preferation ...
+            <h4>Aims of our hackerspace</h4>
+            <ul>
+              <li>electronics</li>
+              <li>robotics & AI</li>
+              <li>security & pentesting</li>
+              <li>low level & assembly hacking</li>
+              <li>open source / core development</li>
+              <li>lectures place</li>
+            </ul>
+          </h3>
+        </h3>
+      </div>
+      <div class='grid_5' style='position: relative; top: 2em;'>
+        <h2>Place</h2>
+        <div id='map_canvas' style='width:100%; height:30%'></div>
+        <small>
+          <a href='http://maps.google.com/maps?hl=cs&amp;q=google+maps+capkova+48,+Brno&amp;ie=UTF8&amp;hq=&amp;hnear=%C4%8C%C3%A1pkova+543%2F48,+602+00+Brno-Veve%C5%99%C3%AD,+%C4%8Cesk%C3%A1+republika&amp;ll=49.204139,16.594379&amp;spn=0.01015,0.015407&amp;t=h&amp;z=14&amp;vpsrc=0&amp;source=embed' style='color:#0000FF;text-align:left'>Zvětšit mapu</a>
+        </small>
+        <h4>PRESENTATION PDF in czech is</h4>
+        <a href='http://undergroundlab.cz/HACKERSPACE/doc/underground.pdf'>available</a>.
+      </div>
+    </div>
+    <div class='clear'></div>
+    <div class='container_12'>
+      <div class='grid_12' style='position: relative; top: 2em; text-align: center;'>
+        We also have a
+        <a href='http://undergroundlab.cz/hackerspace/wiki/'>wiki</a>.
+        <div id='logo_canvas'></div>
+        <p>
+          <small>Powered by plaintext</small>
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
+<script type='text/javascript'>
+  //<![CDATA[
+    function initialize() {
+      var latlng = new google.maps.LatLng(49.20418,16.594387);
+      var myOptions = {
+        zoom: 17,
+        center: latlng,
+        disableDefaultUI: true,
+        mapTypeId: google.maps.MapTypeId.SATELLITE
+      };
+      var map = new google.maps.Map(document.getElementById("map_canvas"),
+          myOptions);
+    
+      var marker = new google.maps.Marker({
+          position: latlng, 
+          map: map, 
+          title:"base48"
+      }); 
+    }
+  //]]>
+</script>

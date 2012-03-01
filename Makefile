@@ -7,7 +7,7 @@ install: build
 build: index.html grid.css
 
 index.html: index.html.haml
-	haml index.html.haml index.html
+	haml -f html5 index.html.haml index.html
 
 clean:
 	rm index.html

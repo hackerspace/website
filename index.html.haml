@@ -62,21 +62,21 @@
         %p
           %small Powered by plaintext
 
-:javascript
-  function initialize() {
-    var latlng = new google.maps.LatLng(49.20418,16.594387);
-    var myOptions = {
-      zoom: 17,
-      center: latlng,
-      disableDefaultUI: true,
-      mapTypeId: google.maps.MapTypeId.SATELLITE
-    };
-    var map = new google.maps.Map(document.getElementById("map_canvas"),
-        myOptions);
+  :javascript
+    function initialize() {
+      var latlng = new google.maps.LatLng(49.20418,16.594387);
+      var myOptions = {
+        zoom: 17,
+        center: latlng,
+        disableDefaultUI: true,
+        mapTypeId: google.maps.MapTypeId.SATELLITE
+      };
+      var map = new google.maps.Map(document.getElementById("map_canvas"),
+          myOptions);
 
-    var marker = new google.maps.Marker({
-        position: latlng,
-        map: map,
-        title:"base48"
-    });
-  }
+      var marker = new google.maps.Marker({
+          position: latlng,
+          map: map,
+          title:"base48"
+      });
+    }

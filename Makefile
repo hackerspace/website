@@ -3,6 +3,8 @@ all: build
 install: build
 	cp index.html /var/www/html
 	cp grid.css /var/www/html
+	cp *.js /var/www/html
+	cp favicon.ico /var/www/html
 
 build: index.html grid.css
 

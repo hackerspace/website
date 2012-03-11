@@ -3,83 +3,168 @@
   %head
     %meta{:content => "initial-scale=1.0, user-scalable=no", :name => "viewport"}/
     %title base48.cz hackerspace
-    %link{:href => "grid.css", :rel => "stylesheet"}
+    %link{:href => "css/main.css", :rel => "stylesheet"}
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
+    %link{:href => "css/font-awesome.css", :rel => "stylesheet"}
     %link{:href => "favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}
-    %script{:src => "jquery-1.7.1.min.js"}
-    %script{:src => "http://maps.googleapis.com/maps/api/js?sensor=false"}
+    %script{:src => "js/jquery-1.7.1.min.js"}
+    %script{:src => "js/bootstrap.min.js"}
+    %script{:src => "http://www.openlayers.org/api/OpenLayers.js"}
 
   %body
-    .container_12
-      .grid_12
-        %center
-          %div{:style => "font-size:4em;"} base48
-          %div hackerspace
+    #overview
+    %div.navbar.navbar-fixed-top
+      %div.navbar-inner
+        %div.container
+          %h3
+            %a.brand{:href=>"http://base48.cz"}
+              %i.icon-random
+              base48
+          %ul.nav
+            %li
+              %a{:href=>"#about-us"} Overview
+            %li
+              %a{:href=>"#place"} Place
+            %li
+              %a{:href=>"#contacts"} Contacts
+            %li
+              %a{:href=>"#legal"} Legal
+            %li
+              %a{:href=>"#membership"} Membership
+    .container
+      %div.hero-unit
+        %div.hero-content
+          %img{:src => "logo.png"}
+          %p
+            base48@irc.freenode.net
+        #photoframe.carousel
+          .carousel-inner
+            .active.item
+              %img{:src => "photos/1.png"}
+            .item
+              %img{:src => "photos/2.png"}
+          %a.carousel-control.left{:href=>"#photoframe", :"data-slide"=>"prev"}
+            %i.icon-arrow-left
+          %a.carousel-control.right{:href=>"#photoframe", :"data-slide"=>"next"}
+            %i.icon-arrow-right
+        %div.clear
+      %hr.soften
+      .row-fluid
+        .span4
+          %h3#about-us Hackerspace
+          %p
+            Community-operated physical place, where people can meet and work on their projects.
           %div
-            %a{:href => "irc://irc.freenode.net/base48"} #base48 @ irc.freenode.net
-    .container_12
-      .grid_7{:style => "position: relative; top: 2em;"}
-        %h2 About
-        %h3 What is hackerspace?
-        %p Community-operated physical place, where people can meet and work on their projects.
-        %p
-          Our hackerspace is
+            %span Our hackerspace is
+            %ul
+              %li well equiped laboratory
+              %li club
+              %li meeting place
+              %li lecture place
+        .span4
+          %h3 Why number 48?
+          %p
+            Because our actual space is in the street Čápkova with orientation number 48
+            and because with name base64 we would have a little problem with google preferation.
+        .span4
+          %h3 Aims of our hackerspace
           %ul
-            %li well equiped laboratory
-            %li club
-            %li meeting place
-            %li lecture place
-        %h3 Why number 48?
-        %p
-          Because our actual space is in the street Čápkova with orientation number 48
-          and because with name base64 we would have a little problem with google preferation.
-        %h3 Aims of our hackerspace
-        %ul
-          %li electronics
-          %li robotics &amp; artificial intelligence
-          %li security &amp; penetration testing
-          %li open source software development
-      .grid_5{:style => "position: relative; top: 2em;"}
-        %h2 Place
-        #map_canvas{:style => "width:100%; height:250px"}
-        %small
-          %a{:href => "http://maps.google.com/maps?hl=cs&q=google+maps+capkova+48,+Brno&ie=UTF8&hq=&hnear=%C4%8C%C3%A1pkova+543%2F48,+602+00+Brno-Veve%C5%99%C3%AD,+%C4%8Cesk%C3%A1+republika&ll=49.204139,16.594379&spn=0.01015,0.015407&t=h&z=14&vpsrc=0&source=embed", :style => "color:#0000FF;text-align:left"} Bigger map
-        %h3 IRC
-        %table
-          %tr
-            %td server:
-            %td irc.freenode.net
-          %tr
-            %td port:
-            %td 6667
-          %tr
-            %td channel:
-            %td #base48
-    .clear
-    .container_12
-      .grid_12{:style => "position: relative; top: 2em; text-align: center;"}
-        We also have a
-        = succeed "." do
-          %a{:href => "http://undergroundlab.cz/hackerspace/wiki/"} wiki
-        #logo_canvas
-        %p
-          %small Powered by plaintext
+            %li electronics
+            %li robotics
+            %li artificial intelligence
+            %li security
+            %li penetration testing
+            %li open source software development
+      %hr
+      .row-fluid
+        .span6
+          %h3#contacts Contact
+          Join us on
+          %abbr{:title=>"Internet Relay Chat"}IRC
+          – our main communication channel:
+          %table#irc
+            %tr
+              %td
+                %i.icon-chevron-right
+                server
+              %td irc.freenode.net
+            %tr
+              %td
+                %i.icon-chevron-right
+                port
+              %td 6667
+            %tr
+              %td
+                %i.icon-chevron-right
+                channel
+              %td #base48
+          %br
+          %h3 Resources
+          %table#resources
+            %tr
+              %td
+                %i.icon-book
+                wiki
+              %td
+                %a{:href=>"http://wiki.base48.cz"} wiki.base48.cz
+            %tr
+              %td
+                %i.icon-file
+                mailinglists
+              %td
+                %a{:href=>"http://lists.base48.cz"} lists.base48.cz
+            %tr
+              %td
+                %i.icon-github-sign
+                github
+              %td
+                %a{:href=>"http://github.com/hackerspace/"} github.com/hackerspace
+        .span6
+          %h3#place Place
+          #map_canvas{:style => "width:100%; height:250px"}
+          #map_btn
+            %a.btn.btn-small{:href => "http://maps.google.com/maps?hl=cs&q=google+maps+capkova+48,+Brno&ie=UTF8&hq=&hnear=%C4%8C%C3%A1pkova+543%2F48,+602+00+Brno-Veve%C5%99%C3%AD,+%C4%8Cesk%C3%A1+republika&ll=49.204139,16.594379&spn=0.01015,0.015407&t=h&z=14&vpsrc=0&source=embed"}
+              %i.icon-map-marker
+              Google Maps
+            %a.btn.btn-small{:href => "http://www.openstreetmap.org/?mlat=49.20418&mlon=16.594387&zoom=17"}
+              %i.icon-search
+              Bigger map
+
+      %hr
+      .row-fluid
+        .span6
+          %h3#legal Legal
+          Our legal entity is Underground, o.s.
+          %ul
+            %li registered 6.8.2010
+            %li IČO: 22859802
+            %li bank account: 2900086515/2010
+        .span6
+          %h3#membership Membership
+          Monthly fee for regular memebers is 400 CZK and 200 CZK for students.
+      %hr
+      .row
+        .span2.offset5
+          We also have a
+          %a{:href => "http://wiki.base48.cz"} wiki
+          #logo_canvas
+          %p
+            %small Powered by plaintext
 
   :javascript
-    function initialize() {
-      var latlng = new google.maps.LatLng(49.20418,16.594387);
-      var myOptions = {
-        zoom: 17,
-        center: latlng,
-        disableDefaultUI: true,
-        mapTypeId: google.maps.MapTypeId.SATELLITE
-      };
-      var map = new google.maps.Map(document.getElementById("map_canvas"),
-          myOptions);
+    function boot() {
+      $('.carousel').carousel(0);
+      var map = new OpenLayers.Map("map_canvas");
+      map.addLayer(new OpenLayers.Layer.OSM());
+      var lonLat = new OpenLayers.LonLat(16.594387, 49.20418).transform(
+            new OpenLayers.Projection("EPSG:4326"),
+            map.getProjectionObject()
+        );
 
-      var marker = new google.maps.Marker({
-          position: latlng,
-          map: map,
-          title:"base48"
-      });
+      var zoom=16;
+      var markers = new OpenLayers.Layer.Markers( "Markers" );
+      map.addLayer(markers);
+      markers.addMarker(new OpenLayers.Marker(lonLat));
+      map.setCenter (lonLat, zoom);
     }
-    $(document).ready(initialize());
+    $(document).ready(boot());

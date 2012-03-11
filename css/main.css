@@ -1,0 +1,65 @@
+#overview {
+  height: 60px;
+}
+
+.hero-unit {
+  background: none !important;
+  border: 1px solid #eee;
+}
+.hero-content {
+  text-align: center;
+  width: 300px;
+  float: left;
+  text-shadow: 2px 2px 2px #eee;
+}
+
+#photoframe {
+  float: right;
+  width: 330px;
+  height: 200px;
+  margin-top: -20px;
+}
+#photoframe img {
+  border: 1px outset #ddd;
+}
+
+#photoframe .carousel-control {
+  top: 235px;
+  font-size: 17px;
+  width: 23px;
+  height: 23px;
+  line-height: 24px;
+  border-color: #eee;
+  background: #888;
+}
+a.left {
+  left: 135px !important;
+}
+a.right {
+  right: 135px !important;
+}
+
+#map_btn {
+  padding-top: 2px;
+  float: right;
+}
+
+hr, .clear { clear: both; }
+
+.olControlAttribution {
+  bottom: 0px !important;
+  right: 0px !important;
+  width: 100%;
+  color: #666;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1px 2px 0 4px;
+  text-align: right;
+}
+
+#irc, #resources {
+  margin: 15px 0 0 15px;
+}
+
+#irc td, #resources td {
+width: 100px;
+}

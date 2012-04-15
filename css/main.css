@@ -2,6 +2,12 @@
   height: 60px;
 }
 
+@media (max-width: 979px) {
+  .nav {
+    clear: left;
+  }
+}
+
 .hero-unit {
   background: none !important;
   border: 1px solid #eee;

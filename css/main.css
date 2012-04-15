@@ -6,6 +6,12 @@
   .nav {
     clear: left;
   }
+  .hero-content {
+    width: 100% !important;
+  }
+  .carousel {
+    display: none;
+  }
 }
 
 .hero-unit {

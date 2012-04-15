@@ -152,20 +152,20 @@
           %p
             %small Powered by plaintext
 
-  :javascript
-    function boot() {
-      $('.carousel').carousel(0);
-      var map = new OpenLayers.Map("map_canvas");
-      map.addLayer(new OpenLayers.Layer.OSM());
-      var lonLat = new OpenLayers.LonLat(16.594387, 49.20418).transform(
-            new OpenLayers.Projection("EPSG:4326"),
-            map.getProjectionObject()
-        );
+    :javascript
+      function boot() {
+        $('.carousel').carousel(0);
+        var map = new OpenLayers.Map("map_canvas");
+        map.addLayer(new OpenLayers.Layer.OSM());
+        var lonLat = new OpenLayers.LonLat(16.594387, 49.20418).transform(
+              new OpenLayers.Projection("EPSG:4326"),
+              map.getProjectionObject()
+          );
 
-      var zoom=16;
-      var markers = new OpenLayers.Layer.Markers( "Markers" );
-      map.addLayer(markers);
-      markers.addMarker(new OpenLayers.Marker(lonLat));
-      map.setCenter (lonLat, zoom);
-    }
-    $(document).ready(boot());
+        var zoom=16;
+        var markers = new OpenLayers.Layer.Markers( "Markers" );
+        map.addLayer(markers);
+        markers.addMarker(new OpenLayers.Marker(lonLat));
+        map.setCenter (lonLat, zoom);
+      }
+      $(document).ready(boot());

@@ -76,5 +76,9 @@ hr, .clear { clear: both; }
 }
 
 #irc td, #resources td {
-width: 100px;
+  width: 100px;
+}
+
+.nav i {
+  font-size: 80%;
 }

@@ -2,6 +2,7 @@
 %html
   %head
     %meta{:content => "initial-scale=1.0, width=device-width", :name => "viewport"}/
+    %meta{:charset => "utf-8"}
     %title base48.cz hackerspace brno
     %link{:href => "css/main.css", :rel => "stylesheet"}
     %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
@@ -71,7 +72,7 @@
           %div
             %span Our hackerspace is
             %ul
-              %li a well equiped laboratory
+              %li a well equipped laboratory
               %li a club
               %li a meeting place
               %li a lecture place
@@ -80,18 +81,21 @@
           %h3 Why number 48?
           %p
             Because our actual space is in the street Čápkova with orientation number 48
-            and because with name base64 we would have a little problem with google preferation.
+            and because with name base64 we would have a little problem with search engine preference.
         .span4
           %h3 Aims of our hackerspace
           %ul
             %li electronics
             %li robotics
             %li artificial intelligence
+            %li knowledge sharing
             %li
               %abbr{:title=>"Information and communication technology"} ICT
               security
             %li penetration testing
+            %li 3D printing
             %li open source software and hardware development
+            %li support of non-profit organizations sharing similar goals
       %hr
       .row-fluid
         .span6
@@ -149,16 +153,40 @@
 
       %hr
       .row-fluid
-        .span6
+        .span3
           %h3#legal Legal
           Our legal entity is base48, z.s.
           %ul
             %li registered 6.8.2010
             %li IČ: 22859802
             %li bank account: 2900086515/2010
-        .span6
+        .span3
+          %h3#support Support us
+          We accept financial support
+          and donations in form of equipment
+          that might be beneficial for us.
+          As we strive to remain as neutral
+          as possible we probably won't be able
+          to provide much in return.
+        .span3
           %h3#membership Membership
-          Monthly fee for regular members is 400 CZK and 200 CZK for students.
+          %p
+            While people can visit and use the hackerspace
+            more or less without restrictions, being a regular member
+            brings some advantages such as unlimited access
+            to both physical and virtual infrastructure we
+            provide. The funds we receive from our members
+            are used to cover the costs of running the hackerspace
+            and for buying new equipment.
+
+          %p
+            Monthly fee for regular memebers is 400 CZK and 200 CZK for students.
+        .span3
+          %h3#coops Cooperation
+          We cooperate with following organizations:
+          .support
+            %a{:href => "http://vspfree.cz"}
+              %img{:src => "img/vpsfree.svg", :alt => "vpsfree.cz"}
       %hr
       .row
         .span2.offset5

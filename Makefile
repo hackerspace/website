@@ -13,3 +13,7 @@ index.html: index.html.haml
 
 clean:
 	rm index.html
+
+watch-build:
+	while true; do inotifywait -r -e close_write .; make; done
+

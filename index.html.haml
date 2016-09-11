@@ -197,7 +197,14 @@
       function boot() {
         $('.carousel').carousel(0);
         var map = new OpenLayers.Map("map_canvas");
-        map.addLayer(new OpenLayers.Layer.OSM());
+        map.addLayer(new OpenLayers.Layer.OSM(
+          "OpenStreetMap",
+          // Official OSM tileset as protocol-independent URLs
+          [
+              '//a.tile.openstreetmap.org/${z}/${x}/${y}.png',
+              '//b.tile.openstreetmap.org/${z}/${x}/${y}.png',
+              '//c.tile.openstreetmap.org/${z}/${x}/${y}.png'
+          ], null));
         var lonLat = new OpenLayers.LonLat(16.594387, 49.20418).transform(
               new OpenLayers.Projection("EPSG:4326"),
               map.getProjectionObject()

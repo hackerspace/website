@@ -140,10 +140,10 @@
           %h3#place Place
           #map_canvas{:style => "width:100%; height:250px"}
           #map_btn
-            %a.btn.btn-small{:href => "https://maps.google.com/maps?hl=cs&q=google+maps+capkova+48,+Brno&ie=UTF8&hq=&hnear=%C4%8C%C3%A1pkova+543%2F48,+602+00+Brno-Veve%C5%99%C3%AD,+%C4%8Cesk%C3%A1+republika&ll=49.204139,16.594379&spn=0.01015,0.015407&t=h&z=14&vpsrc=0&source=embed"}
+            %a.btn.btn-small{:href => "https://www.google.com/maps/place/base48.cz+hackerspace/@49.2242367,16.5968322,100a,35y,271.25h,45.62t/data=!3m1!1e3!4m5!3m4!1s0x4712958db2465805:0xa957e93a893b0913!8m2!3d49.224284!4d16.5955943"}
               %i.icon-map-marker
               Google Maps
-            %a.btn.btn-small{:href => "https://www.openstreetmap.org/?mlat=49.20418&mlon=16.594387&zoom=17"}
+            %a.btn.btn-small{:href => "https://www.openstreetmap.org/?mlat=49.22424&mlon=16.59555&zoom=17"}
               %i.icon-search
               Bigger map
 
@@ -201,7 +201,7 @@
               '//b.tile.openstreetmap.org/${z}/${x}/${y}.png',
               '//c.tile.openstreetmap.org/${z}/${x}/${y}.png'
           ], null));
-        var lonLat = new OpenLayers.LonLat(16.594387, 49.20418).transform(
+        var lonLat = new OpenLayers.LonLat(16.59555, 49.22424).transform(
               new OpenLayers.Projection("EPSG:4326"),
               map.getProjectionObject()
           );

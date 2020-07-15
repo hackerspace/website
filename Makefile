@@ -9,7 +9,7 @@ install: build
 build: index.html
 
 index.html: index.html.haml
-	haml -E UTF-8:UTF-8 -f html5 index.html.haml index.html
+	haml -f html5 index.html.haml index.html
 
 clean:
 	rm index.html
